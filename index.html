@@ -21,6 +21,8 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#blog">Blog</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -110,9 +112,56 @@
       {% endif %}
     </section>
 
+    <!-- ============ RECOMMENDATIONS ============ -->
+    <section class="section container" id="recommendations">
+      <h2><span class="section-index">04</span> Recommendations</h2>
+      <div class="rec-groups">
+        <div class="rec-group">
+          <h3>Videos</h3>
+          <ul class="rec-list">
+            {% for item in site.data.recommendations %}{% if item.type == "video" %}
+            <li class="rec-item">
+              <a href="{{ item.url }}" rel="noopener">{{ item.title }}</a>
+              <span class="rec-creator">· {{ item.creator }}</span>
+              {% if item.note %}<p class="rec-note">{{ item.note }}</p>{% endif %}
+            </li>
+            {% endif %}{% endfor %}
+          </ul>
+        </div>
+        <div class="rec-group">
+          <h3>Books</h3>
+          <ul class="rec-list">
+            {% for item in site.data.recommendations %}{% if item.type == "book" %}
+            <li class="rec-item">
+              <a href="{{ item.url }}" rel="noopener">{{ item.title }}</a>
+              <span class="rec-creator">· {{ item.creator }}</span>
+              {% if item.note %}<p class="rec-note">{{ item.note }}</p>{% endif %}
+            </li>
+            {% endif %}{% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section container" id="gallery">
+      <h2><span class="section-index">05</span> Gallery</h2>
+      <div class="gallery-grid">
+        {% for item in site.data.gallery %}
+        <figure class="gallery-item">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.title }}" loading="lazy">
+          <figcaption>
+            <strong>{{ item.title }}</strong>
+            <p>{{ item.caption }}</p>
+          </figcaption>
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+
     <!-- ============ SKILLS ============ -->
     <section class="section container" id="skills">
-      <h2><span class="section-index">04</span> Skills</h2>
+      <h2><span class="section-index">06</span> Skills</h2>
       <dl class="skills">
         <div class="skill-group">
           <dt>[Category — e.g. Cloud &amp; Infrastructure]</dt>
@@ -141,7 +190,7 @@
 
     <!-- ============ CONTACT ============ -->
     <section class="section container" id="contact">
-      <h2><span class="section-index">05</span> Contact</h2>
+      <h2><span class="section-index">07</span> Contact</h2>
       <div class="prose">
         <p>
           [An invitation to reach out — what you’re open to: roles, freelance work,

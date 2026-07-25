@@ -7,6 +7,9 @@ via GitHub Pages (deploy from branch `main`, root folder, built with Jekyll).
 - `styles.css` — styling
 - `_posts/` — blog posts as markdown
 - `_layouts/post.html` — template that wraps each post
+- `_data/recommendations.yml` — videos and books shown in the Recommendations section
+- `_data/gallery.yml` — images and captions shown in the Gallery section
+- `assets/gallery/` — gallery images
 - `_config.yml` — Jekyll settings (site title, base URL, post permalinks)
 
 ## Writing a blog post
@@ -25,6 +28,29 @@ Your content in markdown.
 
 Push to `main` — GitHub Pages rebuilds in about a minute. The post is published
 at `/blog/your-title/` and listed automatically in the homepage Blog section.
+
+## Adding a recommendation
+
+Append an entry to `_data/recommendations.yml`:
+
+```yaml
+- type: video   # or book
+  title: "Title"
+  creator: "Channel, speaker, or author"
+  url: "https://..."
+  note: "Optional one-liner on why it's worth it."
+```
+
+## Adding a gallery item
+
+Drop the image into `assets/gallery/` and append to `_data/gallery.yml`:
+
+```yaml
+- image: /assets/gallery/my-chart.png
+  title: "Observation title"
+  caption: "What the data shows, and the idea it supports."
+  alt: "Description for screen readers"
+```
 
 ## Local preview
 

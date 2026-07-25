@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f2f3f7"/>
+  <rect x="8" y="8" width="384" height="284" fill="none" stroke="#c9cdd8" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="200" y="146" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="16" fill="#565b68">[Chart or image placeholder]</text>
+  <text x="200" y="172" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#8b90a0">Replace assets/gallery/placeholder-1.svg</text>
+</svg>

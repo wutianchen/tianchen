@@ -1,0 +1,11 @@
+# Rendered in the homepage "Gallery" section.
+# Put images in assets/gallery/ (SVG, PNG, JPG all work); alt is optional
+# but recommended for accessibility.
+- image: /assets/gallery/placeholder-1.svg
+  title: "[Observation title]"
+  caption: "[What the data shows, and the idea it supports.]"
+  alt: "[Describe the image for screen readers]"
+
+- image: /assets/gallery/placeholder-2.svg
+  title: "[Another observation]"
+  caption: "[Short caption.]"

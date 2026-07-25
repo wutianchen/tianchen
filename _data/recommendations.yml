@@ -1,0 +1,23 @@
+# Rendered in the homepage "Recommendations" section.
+# type must be "video" or "book"; note is optional.
+- type: video
+  title: "[Video title]"
+  creator: "[Channel or speaker]"
+  url: "#"
+  note: "[One line on why it's worth watching.]"
+
+- type: video
+  title: "[Another video]"
+  creator: "[Creator]"
+  url: "#"
+
+- type: book
+  title: "[Book title]"
+  creator: "[Author]"
+  url: "#"
+  note: "[One line on what it changed about how you think.]"
+
+- type: book
+  title: "[Another book]"
+  creator: "[Author]"
+  url: "#"
