@@ -1,3 +1,6 @@
+---
+# Front matter makes Jekyll process the Liquid tags below (blog post listing).
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +20,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -88,26 +91,24 @@
       </ol>
     </section>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section container" id="projects">
-      <h2><span class="section-index">03</span> Projects</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3><a href="#">[Project Name]</a></h3>
-          <p>[What it does, who it’s for, and what’s interesting about how you built it.]</p>
-          <p class="card-tags"><span>[Tech]</span><span>[Tech]</span><span>[Tech]</span></p>
-        </article>
-        <article class="card">
-          <h3><a href="#">[Project Name]</a></h3>
-          <p>[Short description.]</p>
-          <p class="card-tags"><span>[Tech]</span><span>[Tech]</span></p>
-        </article>
-        <article class="card">
-          <h3><a href="#">[Project Name]</a></h3>
-          <p>[Short description.]</p>
-          <p class="card-tags"><span>[Tech]</span></p>
-        </article>
-      </div>
+    <!-- ============ BLOG ============ -->
+    <section class="section container" id="blog">
+      <h2><span class="section-index">03</span> Blog</h2>
+      {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li class="post-item">
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            <span class="post-title">{{ post.title }}</span>
+            <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          </a>
+          {% if post.description %}<p class="post-excerpt">{{ post.description }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <div class="prose"><p>No posts yet — the first one is coming soon.</p></div>
+      {% endif %}
     </section>
 
     <!-- ============ SKILLS ============ -->

@@ -1,0 +1,6 @@
+title: Your Name
+baseurl: "/tianchen"
+url: "https://wutianchen.github.io"
+permalink: /blog/:title/
+exclude:
+  - README.md
