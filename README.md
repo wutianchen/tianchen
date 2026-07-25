@@ -36,9 +36,9 @@ Append an entry to `_data/recommendations.yml`:
 ```yaml
 - type: video   # or book
   title: "Title"
-  creator: "Channel, speaker, or author"
   url: "https://..."
-  note: "Optional one-liner on why it's worth it."
+  creator: "Channel, speaker, or author"   # optional
+  note: "One-liner on why it's worth it."  # optional
 ```
 
 ## Adding a gallery item

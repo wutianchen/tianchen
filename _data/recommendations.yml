@@ -1,15 +1,8 @@
 # Rendered in the homepage "Recommendations" section.
-# type must be "video" or "book"; note is optional.
+# type must be "video" or "book"; creator and note are optional.
 - type: video
-  title: "[Video title]"
-  creator: "[Channel or speaker]"
-  url: "#"
-  note: "[One line on why it's worth watching.]"
-
-- type: video
-  title: "[Another video]"
-  creator: "[Creator]"
-  url: "#"
+  title: "MIT 6.824: Distributed Systems"
+  url: "https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB"
 
 - type: book
   title: "[Book title]"
