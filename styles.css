@@ -1,29 +1,17 @@
 /* ===== Design tokens ===== */
 :root {
-  --bg: #fbfbfd;
+  color-scheme: light;
+  --bg: #ffffff;
   --bg-elevated: #ffffff;
-  --text: #1c1e26;
-  --text-muted: #5b5f6e;
+  --text: #1e40af;
+  --text-muted: #4a5fd0;
   --accent: #3b5bdb;
   --accent-soft: #e7ecfd;
-  --border: #e4e6ee;
-  --shadow: 0 1px 3px rgb(20 22 34 / 0.06), 0 8px 24px rgb(20 22 34 / 0.06);
+  --border: #dbe2f7;
+  --shadow: 0 1px 3px rgb(30 64 175 / 0.08), 0 8px 24px rgb(30 64 175 / 0.08);
   --radius: 12px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14161d;
-    --bg-elevated: #1c1f29;
-    --text: #e8eaf1;
-    --text-muted: #9aa0b0;
-    --accent: #7c96f5;
-    --accent-soft: #232a45;
-    --border: #2a2e3c;
-    --shadow: 0 1px 3px rgb(0 0 0 / 0.4), 0 8px 24px rgb(0 0 0 / 0.3);
-  }
 }
 
 /* ===== Base ===== */
