@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Personal Website</title>
+  <meta name="description" content="Personal website of Your Name — [one-line summary of what you do].">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="#top">YN</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="top">
+      <p class="hero-kicker">Hello, I’m</p>
+      <h1 class="hero-name">Your Name</h1>
+      <p class="hero-title">[Your headline — e.g. “Cloud &amp; DevOps Engineer” or “Software Engineer, Robotics”]</p>
+      <p class="hero-summary">
+        [Two or three sentences about who you are professionally: what you build,
+        what you care about, and what kind of problems you enjoy solving.]
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn" href="https://github.com/wutianchen" rel="me noopener">GitHub</a>
+        <a class="btn" href="#" rel="me noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section container" id="about">
+      <h2><span class="section-index">01</span> About</h2>
+      <div class="prose">
+        <p>
+          [A short paragraph about your background: where you’re based, what you’ve
+          worked on, and the thread that connects it all.]
+        </p>
+        <p>
+          [Optionally a second paragraph: what you’re exploring right now, or what
+          you’re looking for next.]
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section container" id="experience">
+      <h2><span class="section-index">02</span> Experience</h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">2023 — Present</span>
+          </div>
+          <div class="timeline-body">
+            <h3>[Job Title] · <span class="org">[Company]</span></h3>
+            <p>[One sentence on the scope of the role.]</p>
+            <ul>
+              <li>[A concrete achievement with impact — what changed because of your work.]</li>
+              <li>[Another achievement or responsibility.]</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-meta">
+            <span class="timeline-dates">2020 — 2023</span>
+          </div>
+          <div class="timeline-body">
+            <h3>[Previous Title] · <span class="org">[Company]</span></h3>
+            <p>[One sentence on the scope of the role.]</p>
+            <ul>
+              <li>[Achievement.]</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects">
+      <h2><span class="section-index">03</span> Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3><a href="#">[Project Name]</a></h3>
+          <p>[What it does, who it’s for, and what’s interesting about how you built it.]</p>
+          <p class="card-tags"><span>[Tech]</span><span>[Tech]</span><span>[Tech]</span></p>
+        </article>
+        <article class="card">
+          <h3><a href="#">[Project Name]</a></h3>
+          <p>[Short description.]</p>
+          <p class="card-tags"><span>[Tech]</span><span>[Tech]</span></p>
+        </article>
+        <article class="card">
+          <h3><a href="#">[Project Name]</a></h3>
+          <p>[Short description.]</p>
+          <p class="card-tags"><span>[Tech]</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section container" id="skills">
+      <h2><span class="section-index">04</span> Skills</h2>
+      <dl class="skills">
+        <div class="skill-group">
+          <dt>[Category — e.g. Cloud &amp; Infrastructure]</dt>
+          <dd>
+            <span class="chip">[Skill]</span>
+            <span class="chip">[Skill]</span>
+            <span class="chip">[Skill]</span>
+          </dd>
+        </div>
+        <div class="skill-group">
+          <dt>[Category — e.g. Languages &amp; Frameworks]</dt>
+          <dd>
+            <span class="chip">[Skill]</span>
+            <span class="chip">[Skill]</span>
+          </dd>
+        </div>
+        <div class="skill-group">
+          <dt>[Category — e.g. Tooling]</dt>
+          <dd>
+            <span class="chip">[Skill]</span>
+            <span class="chip">[Skill]</span>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container" id="contact">
+      <h2><span class="section-index">05</span> Contact</h2>
+      <div class="prose">
+        <p>
+          [An invitation to reach out — what you’re open to: roles, freelance work,
+          collaboration, or just a conversation.]
+        </p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:you@example.com">you@example.com</a>
+        <a class="btn" href="https://github.com/wutianchen" rel="me noopener">GitHub</a>
+        <a class="btn" href="#" rel="me noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Your Name · Built with plain HTML &amp; CSS, hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+</body>
+</html>
