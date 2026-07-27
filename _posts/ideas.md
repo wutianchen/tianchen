@@ -1,0 +1,1 @@
+* rudimentary blog about [Jbang](https://github.com/jbangdev/jbang)
