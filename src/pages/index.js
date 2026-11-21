@@ -168,8 +168,8 @@ export default function Home() {
         <Section id="recommendations" index="04" title="Recommendations">
           <div className={styles.recGroups}>
             <div>
-              <h3>Videos</h3>
-              <RecList type="video" />
+              <h3>Lectures</h3>
+              <RecList type="lecture" />
             </div>
             <div>
               <h3>Books</h3>

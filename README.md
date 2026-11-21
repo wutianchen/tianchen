@@ -8,7 +8,7 @@ via GitHub Pages. Built with [Docusaurus](https://docusaurus.io/) and deployed b
 - `src/pages/index.module.css` — homepage styling
 - `src/css/custom.css` — site-wide theme colours
 - `blog/` — blog posts as markdown
-- `src/data/recommendations.js` — videos and books shown in the Recommendations section
+- `src/data/recommendations.js` — lectures and books shown in the Recommendations section
 - `src/data/gallery.js` — images and captions shown in the Gallery section
 - `static/img/gallery/` — gallery images
 - `plugins/recent-posts.js` — feeds the post list on the homepage
@@ -39,7 +39,7 @@ Append an entry to `src/data/recommendations.js`:
 
 ```js
 {
-  type: 'video', // or 'book'
+  type: 'lecture', // or 'book'
   title: 'Title',
   url: 'https://...',
   creator: 'Channel, speaker, or author', // optional
