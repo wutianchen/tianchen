@@ -1,0 +1,34 @@
+version: "3"
+
+# Local dev tasks. Run with: `task <task>`.
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  install:
+    desc: Install the Docusaurus dependencies.
+    sources:
+      - package.json
+      - package-lock.json
+    cmds:
+      - npm ci --no-audit --no-fund
+
+  start:
+    desc: Live-reload dev server at http://localhost:3000/tianchen/
+    deps: [install]
+    cmds:
+      - npm start
+
+  build:
+    desc: Production build into build/ (same as CI).
+    deps: [install]
+    cmds:
+      - npm run build
+
+  serve:
+    desc: Build, then serve the production site at http://localhost:3000/tianchen/
+    deps: [build]
+    cmds:
+      - npm run serve

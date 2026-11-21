@@ -1,58 +1,73 @@
 # tianchen
 
 Personal website, published at [https://wutianchen.github.io/tianchen/](https://wutianchen.github.io/tianchen/)
-via GitHub Pages (deploy from branch `main`, root folder, built with Jekyll).
+via GitHub Pages. Built with [Docusaurus](https://docusaurus.io/) and deployed by
+`.github/workflows/deploy.yml` on every push to `main`.
 
-- `index.html` — single-page site (edit the `[bracketed placeholders]` with real content)
-- `styles.css` — styling
-- `_posts/` — blog posts as markdown
-- `_layouts/post.html` — template that wraps each post
-- `_data/recommendations.yml` — videos and books shown in the Recommendations section
-- `_data/gallery.yml` — images and captions shown in the Gallery section
-- `assets/gallery/` — gallery images
-- `_config.yml` — Jekyll settings (site title, base URL, post permalinks)
+- `src/pages/index.js` — homepage (edit the `[bracketed placeholders]` with real content)
+- `src/pages/index.module.css` — homepage styling
+- `src/css/custom.css` — site-wide theme colours
+- `blog/` — blog posts as markdown
+- `src/data/recommendations.js` — lectures and books shown in the Recommendations section
+- `src/data/gallery.js` — images and captions shown in the Gallery section
+- `static/img/gallery/` — gallery images
+- `plugins/recent-posts.js` — feeds the post list on the homepage
+- `docusaurus.config.js` — site settings (title, base URL, navbar, footer)
+- `notes/` — drafts and ideas, not published
 
 ## Writing a blog post
 
-Add a markdown file to `_posts/` named `YYYY-MM-DD-your-title.md`:
+Add a markdown file to `blog/` named `YYYY-MM-DD-your-title.md`:
 
 ```markdown
 ---
-layout: post
 title: "Your title"
 description: "One line shown in the list on the homepage."
+slug: your-title
 ---
 
 Your content in markdown.
 ```
 
-Push to `main` — GitHub Pages rebuilds in about a minute. The post is published
-at `/blog/your-title/` and listed automatically in the homepage Blog section.
+Push to `main` — GitHub Actions rebuilds in about a minute. The post is published
+at `/blog/your-title/`, listed on the blog page, and listed automatically in the
+homepage Blog section. Add `draft: true` to the front matter to keep it unpublished.
 
 ## Adding a recommendation
 
-Append an entry to `_data/recommendations.yml`:
+Append an entry to `src/data/recommendations.js`:
 
-```yaml
-- type: video   # or book
-  title: "Title"
-  url: "https://..."
-  creator: "Channel, speaker, or author"   # optional
-  note: "One-liner on why it's worth it."  # optional
+```js
+{
+  type: 'lecture', // or 'book'
+  title: 'Title',
+  url: 'https://...',
+  creator: 'Channel, speaker, or author', // optional
+  note: "One-liner on why it's worth it.", // optional
+},
 ```
 
 ## Adding a gallery item
 
-Drop the image into `assets/gallery/` and append to `_data/gallery.yml`:
+Drop the image into `static/img/gallery/` and append to `src/data/gallery.js`:
 
-```yaml
-- image: /assets/gallery/my-chart.png
-  title: "Observation title"
-  caption: "What the data shows, and the idea it supports."
-  alt: "Description for screen readers"
+```js
+{
+  image: '/img/gallery/my-chart.png',
+  title: 'Observation title',
+  caption: 'What the data shows, and the idea it supports.',
+  alt: 'Description for screen readers',
+},
 ```
 
 ## Local preview
 
-The homepage and posts need Jekyll to render (`gem install jekyll && jekyll serve`),
-since the post list and markdown conversion happen at build time.
+Needs Node.js 20 or newer.
+
+```sh
+task start   # live-reload dev server at http://localhost:3000/tianchen/
+task build   # production build into build/, same as CI
+task serve   # build, then serve the production site
+```
+
+Without Task: `npm ci`, then `npm start` / `npm run build`.

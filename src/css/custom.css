@@ -1,0 +1,39 @@
+/* Theme colours carried over from the Jekyll site (accent #3b5bdb). */
+:root {
+  --ifm-color-primary: #3b5bdb;
+  --ifm-color-primary-dark: #2f4fd0;
+  --ifm-color-primary-darker: #2c4bc4;
+  --ifm-color-primary-darkest: #243ea2;
+  --ifm-color-primary-light: #5470df;
+  --ifm-color-primary-lighter: #607ae1;
+  --ifm-color-primary-lightest: #8398e8;
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --ifm-code-font-size: 90%;
+  --site-accent-soft: #e7ecfd;
+  --site-shadow: 0 1px 3px rgb(20 22 34 / 0.06), 0 8px 24px rgb(20 22 34 / 0.06);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #8398e8;
+  --ifm-color-primary-dark: #6a83e3;
+  --ifm-color-primary-darker: #5d78e0;
+  --ifm-color-primary-darkest: #3758d6;
+  --ifm-color-primary-light: #9cadec;
+  --ifm-color-primary-lighter: #a9b8ef;
+  --ifm-color-primary-lightest: #cfd8f6;
+  --site-accent-soft: rgb(131 152 232 / 0.15);
+  --site-shadow: none;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Navbar brand styled like the old "YN" badge. */
+.navbar__title {
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  padding: 0.05rem 0.45rem;
+  letter-spacing: 0.02em;
+}
